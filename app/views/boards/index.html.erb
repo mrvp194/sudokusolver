@@ -1,0 +1,21 @@
+<div id="game">
+  <form name="game-form" action="/boards/<%=@sudoku_board.id%>/solve" method="get">
+		<div class="row">
+
+			<% @board.each do |key, value| %>
+	  			<div class="cell">
+
+		  			<% if value != 0 %>
+		  				<input id="<%=key%>" type="number" maxlength="1" value="<%=value%>">
+						<% else %>
+		  				<input id="<%=key%>" type="number" maxlength="1">
+						<% end %>
+
+	  		</div>
+			<% end %>	
+		
+		</div>
+		<input class="submit" type="submit" value="Auto-Complete">
+  </form>
+  <a class="submit" href="/">Reset</a>
+</div>
