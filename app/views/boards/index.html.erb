@@ -6,16 +6,18 @@
 	  			<div class="cell">
 
 		  			<% if value != 0 %>
-		  				<input id="<%=key%>" type="number" maxlength="1" value="<%=value%>">
+		  				<input id="<%=key%>" type="number" maxlength="1" value="<%=value%>" disabled>
 						<% else %>
-		  				<input id="<%=key%>" type="number" maxlength="1">
+		  				<input id="<%=key%>" type="number" maxlength="1" min="1" max="9">
 						<% end %>
 
 	  		</div>
 			<% end %>	
 		
 		</div>
+		<br><br>
 		<input class="submit" type="submit" value="Auto-Complete">
+		<a class="submit" href="/">Reset</a>
   </form>
-  <a class="submit" href="/">Reset</a>
+  
 </div>
